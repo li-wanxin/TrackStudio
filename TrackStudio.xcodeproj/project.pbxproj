@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B00000000000000000000B1 /* TrackStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F1; };
+		2B00000000000000000000B2 /* DemoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F2; };
+		2B00000000000000000000B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F3; };
+		2B00000000000000000000B4 /* CanvasAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F4; };
+		2B00000000000000000000B5 /* PieceGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F5; };
+		2B00000000000000000000BC /* Scene3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000FC; };
+		2B00000000000000000000BD /* DrawingExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000FD; };
+		2B00000000000000000000B8 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F7; };
+		2B00000000000000000000B9 /* PartLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F8; };
+		2B00000000000000000000BB /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000FB; };
+		2B00000000000000000000B7 /* parts_seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000F6; };
+		2B00000000000000000000BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B00000000000000000000FE; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B00000000000000000000F1 /* TrackStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackStudioApp.swift; sourceTree = "<group>"; };
+		2B00000000000000000000F2 /* DemoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoState.swift; sourceTree = "<group>"; };
+		2B00000000000000000000F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B00000000000000000000F4 /* CanvasAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAreaView.swift; sourceTree = "<group>"; };
+		2B00000000000000000000F5 /* PieceGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceGeometry.swift; sourceTree = "<group>"; };
+		2B00000000000000000000FC /* Scene3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3DView.swift; sourceTree = "<group>"; };
+		2B00000000000000000000FD /* DrawingExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingExporter.swift; sourceTree = "<group>"; };
+		2B00000000000000000000F6 /* parts_seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = parts_seed.json; path = "Packages/TrackGeometry/Sources/TrackGeometry/Resources/parts_seed.json"; sourceTree = "<group>"; };
+		2B00000000000000000000F7 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Pose.swift; path = "Packages/TrackGeometry/Sources/TrackGeometry/Pose.swift"; sourceTree = "<group>"; };
+		2B00000000000000000000F8 /* PartLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PartLibrary.swift; path = "Packages/TrackGeometry/Sources/TrackGeometry/PartLibrary.swift"; sourceTree = "<group>"; };
+		2B00000000000000000000FB /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Assembly.swift; path = "Packages/TrackGeometry/Sources/TrackGeometry/Assembly.swift"; sourceTree = "<group>"; };
+		2B00000000000000000000F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B00000000000000000000FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B00000000000000000000FA /* TrackStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B00000000000000000000C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B00000000000000000000A1 /* TrackStudio */ = {
+			isa = PBXGroup;
+			children = (
+				2B00000000000000000000A2 /* App */,
+				2B00000000000000000000A5 /* TrackGeometryKernel */,
+				2B00000000000000000000F6 /* parts_seed.json */,
+				2B00000000000000000000FE /* Assets.xcassets */,
+				2B00000000000000000000A3 /* Support */,
+				2B00000000000000000000A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B00000000000000000000A2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B00000000000000000000F1 /* TrackStudioApp.swift */,
+				2B00000000000000000000F2 /* DemoState.swift */,
+				2B00000000000000000000F3 /* ContentView.swift */,
+				2B00000000000000000000F4 /* CanvasAreaView.swift */,
+				2B00000000000000000000F5 /* PieceGeometry.swift */,
+				2B00000000000000000000FC /* Scene3DView.swift */,
+				2B00000000000000000000FD /* DrawingExporter.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2B00000000000000000000A5 /* TrackGeometryKernel */ = {
+			isa = PBXGroup;
+			children = (
+				2B00000000000000000000F7 /* Pose.swift */,
+				2B00000000000000000000F8 /* PartLibrary.swift */,
+				2B00000000000000000000FB /* Assembly.swift */,
+			);
+			name = TrackGeometryKernel;
+			sourceTree = "<group>";
+		};
+		2B00000000000000000000A3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2B00000000000000000000F9 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		2B00000000000000000000A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B00000000000000000000FA /* TrackStudio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B00000000000000000000E1 /* TrackStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B00000000000000000000C6;
+			buildPhases = (
+				2B00000000000000000000C1 /* Sources */,
+				2B00000000000000000000C2 /* Frameworks */,
+				2B00000000000000000000C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackStudio;
+			productName = TrackStudio;
+			productReference = 2B00000000000000000000FA /* TrackStudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B00000000000000000000E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					2B00000000000000000000E1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 2B00000000000000000000C5;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh_CN",
+			);
+			mainGroup = 2B00000000000000000000A1;
+			productRefGroup = 2B00000000000000000000A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B00000000000000000000E1 /* TrackStudio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B00000000000000000000C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B00000000000000000000B7 /* parts_seed.json in Resources */,
+				2B00000000000000000000BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B00000000000000000000C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B00000000000000000000B1 /* TrackStudioApp.swift in Sources */,
+				2B00000000000000000000B2 /* DemoState.swift in Sources */,
+				2B00000000000000000000B3 /* ContentView.swift in Sources */,
+				2B00000000000000000000B4 /* CanvasAreaView.swift in Sources */,
+				2B00000000000000000000B5 /* PieceGeometry.swift in Sources */,
+				2B00000000000000000000BC /* Scene3DView.swift in Sources */,
+				2B00000000000000000000BD /* DrawingExporter.swift in Sources */,
+				2B00000000000000000000B8 /* Pose.swift in Sources */,
+				2B00000000000000000000B9 /* PartLibrary.swift in Sources */,
+				2B00000000000000000000BB /* Assembly.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2B00000000000000000000C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		2B00000000000000000000C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B00000000000000000000C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9ABJAN4CP;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.workbuddy.trackstudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2B00000000000000000000CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.workbuddy.trackstudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B00000000000000000000C5 /* Build configuration list for PBXProject "TrackStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B00000000000000000000C7 /* Debug */,
+				2B00000000000000000000C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B00000000000000000000C6 /* Build configuration list for PBXNativeTarget "TrackStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B00000000000000000000C9 /* Debug */,
+				2B00000000000000000000CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B00000000000000000000E0 /* Project object */;
+}

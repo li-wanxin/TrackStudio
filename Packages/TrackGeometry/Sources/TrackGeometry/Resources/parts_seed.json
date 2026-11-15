@@ -1,0 +1,785 @@
+{
+  "schema": "wooden-track-parts/0.1",
+  "updated": "2026-11-07",
+  "units": {
+    "length": "mm",
+    "angle": "deg",
+    "level": "mm"
+  },
+  "conventions": {
+    "origin": "端口 a 固定在局部原点 (0,0)，主体沿 +x 延伸",
+    "heading": "端口朝向 = 轨道从件内指向外的切线方向，逆时针为正，0° = +x",
+    "radius": "弯轨半径一律指轨道中心线半径；内缘 = R - 20，外缘 = R + 20（轨宽 40）",
+    "polarity": "M = 凸榫(公头), F = 凹槽(母口)",
+    "level": "端口相对基准地面高度，0 = 地面层"
+  },
+  "tolerance": {
+    "nominal_deduction": 0.2,
+    "nominal_deduction_note": "KYZ 实测：实际件比标称短 0.2mm（两端各 0.1mm 退让），求解用标称值即可",
+    "closed_loop_exact_mm": 0.3,
+    "vario_slack_per_joint_mm": 1.5,
+    "vario_slack_per_joint_deg": 1.0,
+    "vario_note": "BRIO Vario 间隙为社区经验值，待卡尺实测标定；求解器应把 Vario 余量当作可消耗资源"
+  },
+  "connector": {
+    "confidence": "community-measured",
+    "source": "kapycad.com 实测汇总",
+    "track_width": 40,
+    "track_height": 12,
+    "groove_spacing_center": 19.5,
+    "groove_spacing_note": "两轮槽中心距约 19-20mm",
+    "groove_width": 5.75,
+    "groove_depth": 3,
+    "male_head_diameter": 11.5,
+    "male_neck_width": 5.5,
+    "male_thickness": 5.5
+  },
+  "sources": [
+    {
+      "id": "trackplanner",
+      "url": "https://trackplanner.io/en/track-systems/brio",
+      "note": "直轨长度与弯轨半径"
+    },
+    {
+      "id": "woodenrailway",
+      "url": "https://woodenrailway.info/track/brio-track-guide",
+      "note": "道岔几何、爬坡件升高 64mm、缓冲器"
+    },
+    {
+      "id": "kapycad",
+      "url": "https://kapycad.com/en/academy/standards/wooden-train-track",
+      "note": "连接件截面实测"
+    },
+    {
+      "id": "kyz_starter",
+      "url": "https://makerworld.com.cn/zh/models/891220",
+      "note": "KYZ 入门套装、公差策略、兼容性实测报告"
+    },
+    {
+      "id": "kyz_ramps",
+      "url": "https://makerworld.com.cn/zh/models/948940",
+      "note": "坡道桥墩略高于木制，保证宜家电动火车可通过"
+    },
+    {
+      "id": "3dgo_curve",
+      "url": "https://www.3dgo.app/models/makerworld/898847",
+      "note": "弯轨内缘半径 182mm，与中心线 202mm 口径互证"
+    }
+  ],
+  "compatibility_report": [
+    "BRIO：配合良好（KYZ 用户实测）",
+    "宜家 LILLABO：一侧紧一侧略松，火车可正常通行；凸榫略短，需适配件",
+    "Eichhorn：凸榫略短，需适配件",
+    "白标套装（Chad Valley / Busy Town / Lidl Playtive 等）：配合良好",
+    "Hape / Bigjigs / Thomas Wooden Railway / KidKraft / Melissa & Doug：同一事实标准，可互连"
+  ],
+  "parts": [
+    {
+      "id": "STR_54",
+      "name": "短直轨",
+      "alias": "BRIO A2 / 33333",
+      "family": "straight",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 54
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 54,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        54,
+        20
+      ],
+      "notes": "另有 M-M / F-F 变体（3D 打印件常见），库存需按极性变体分开计数"
+    },
+    {
+      "id": "STR_108",
+      "name": "直轨",
+      "alias": "BRIO A1 / 33334",
+      "family": "straight",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 108
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 108,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        108,
+        20
+      ]
+    },
+    {
+      "id": "STR_144",
+      "name": "中直轨",
+      "alias": "BRIO A / 33335",
+      "family": "straight",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 144
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 144,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        144,
+        20
+      ]
+    },
+    {
+      "id": "STR_216",
+      "name": "长直轨",
+      "alias": "BRIO D / 33341",
+      "family": "straight",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 216
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 216,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        216,
+        20
+      ]
+    },
+    {
+      "id": "CUR_E45",
+      "name": "大弯轨 45°",
+      "alias": "BRIO E / 33342",
+      "family": "curve",
+      "confidence": "community-verified",
+      "geometry": {
+        "radius": 202,
+        "angle": 45
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 142.8,
+          "y": 59.2,
+          "heading": 45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        162.8,
+        79.2
+      ],
+      "notes": "8 块拼成整圆；b 端坐标 = R·sin45 = 142.84, R·(1-cos45) = 59.16"
+    },
+    {
+      "id": "CUR_E1_45",
+      "name": "小弯轨 45°",
+      "alias": "BRIO E1",
+      "family": "curve",
+      "confidence": "community-derived",
+      "geometry": {
+        "radius": 90,
+        "angle": 45
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 63.6,
+          "y": 26.4,
+          "heading": 45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        83.6,
+        46.4
+      ],
+      "notes": "半径 90mm 来自道岔表反推（T 道岔 88mm 与 E1 差 2mm），角度待实测确认"
+    },
+    {
+      "id": "CUR_C100_MM",
+      "name": "环岛弯轨 100mm 双公",
+      "alias": "KYZ C100MM",
+      "family": "curve",
+      "confidence": "estimated",
+      "geometry": {
+        "radius": 100,
+        "angle": 45
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 70.7,
+          "y": 29.3,
+          "heading": 45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        90.7,
+        49.3
+      ],
+      "notes": "KYZ 2025-02-07 新增，用于 Y 形环岛；C100FF 为双母变体"
+    },
+    {
+      "id": "SW_L",
+      "name": "左开道岔",
+      "alias": "BRIO L / 33346",
+      "family": "switch",
+      "confidence": "community-derived",
+      "geometry": {
+        "base_straight": 144,
+        "branch_radius": 202,
+        "branch_angle": 45
+      },
+      "ports": [
+        {
+          "id": "in",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "straight",
+          "x": 144,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "branch",
+          "x": 144,
+          "y": 59.2,
+          "heading": 45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        144,
+        79.2
+      ],
+      "notes": "branch 出口横向偏移 = R(1-cos45) = 59.2mm；道岔有状态（当前开通方向），序列化时必须存；M1 为机械联动版，几何同 L"
+    },
+    {
+      "id": "SW_M",
+      "name": "右开道岔",
+      "alias": "BRIO M / 33346",
+      "family": "switch",
+      "confidence": "community-derived",
+      "geometry": {
+        "base_straight": 144,
+        "branch_radius": 202,
+        "branch_angle": 45
+      },
+      "ports": [
+        {
+          "id": "in",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "straight",
+          "x": 144,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "branch",
+          "x": 144,
+          "y": -59.2,
+          "heading": -45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -79.2,
+        144,
+        20
+      ]
+    },
+    {
+      "id": "SW_O1",
+      "name": "短左开道岔",
+      "alias": "BRIO O1 / 33394",
+      "family": "switch",
+      "confidence": "community-derived",
+      "geometry": {
+        "base_straight": 108,
+        "branch_radius": 90,
+        "branch_angle": 45
+      },
+      "ports": [
+        {
+          "id": "in",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "straight",
+          "x": 108,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "branch",
+          "x": 108,
+          "y": 26.4,
+          "heading": 45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        108,
+        46.4
+      ]
+    },
+    {
+      "id": "SW_P1",
+      "name": "短右开道岔",
+      "alias": "BRIO P1 / 33394",
+      "family": "switch",
+      "confidence": "community-derived",
+      "geometry": {
+        "base_straight": 108,
+        "branch_radius": 90,
+        "branch_angle": 45
+      },
+      "ports": [
+        {
+          "id": "in",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "straight",
+          "x": 108,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "branch",
+          "x": 108,
+          "y": -26.4,
+          "heading": -45,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -46.4,
+        108,
+        20
+      ]
+    },
+    {
+      "id": "SW_T",
+      "name": "T 形三通道岔",
+      "alias": "BRIO T / 33463",
+      "family": "switch",
+      "confidence": "estimated",
+      "geometry": {
+        "base_straight": 216,
+        "branch_radius": 88,
+        "branch_angle": 90
+      },
+      "ports": [
+        {
+          "id": "in",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "straight",
+          "x": 216,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "branch",
+          "x": 108,
+          "y": 88,
+          "heading": 90,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        216,
+        108
+      ],
+      "notes": "分支半径约 88mm（比 E1 紧 2mm），分支出口位置待实测"
+    },
+    {
+      "id": "CROSS_H",
+      "name": "十字交叉",
+      "alias": "BRIO H / 33387",
+      "family": "cross",
+      "confidence": "community-derived",
+      "geometry": {
+        "length": 144,
+        "width": 144
+      },
+      "ports": [
+        {
+          "id": "w",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "e",
+          "x": 144,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "n",
+          "x": 72,
+          "y": 72,
+          "heading": 90,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "s",
+          "x": 72,
+          "y": -72,
+          "heading": 270,
+          "polarity": "F",
+          "level": 0
+        }
+      ],
+      "connectivity": [
+        [
+          "w",
+          "e"
+        ],
+        [
+          "n",
+          "s"
+        ]
+      ],
+      "footprint_bbox": [
+        0,
+        -72,
+        144,
+        72
+      ],
+      "notes": " connectivity 为 A-C 直通、B-D 直通，四端口不可任意互连；各臂极性待实测"
+    },
+    {
+      "id": "ASC_N",
+      "name": "爬坡轨",
+      "alias": "BRIO N / 33332",
+      "family": "ramp",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 216,
+        "rise": 64,
+        "horizontal_projection": 207
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 207,
+          "y": 0,
+          "heading": 0,
+          "polarity": "F",
+          "level": 64
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        207,
+        20
+      ],
+      "notes": "升高 64mm（woodenrailway 实测）；件体为拱形，水平投影短于 216；实物极性为低公高母——低端公头插进地面轨道母口，高端母口承接二层轨道公头（用户实物照片确认）"
+    },
+    {
+      "id": "BRIDGE_DECK",
+      "name": "桥面（中跨）",
+      "family": "bridge",
+      "confidence": "estimated",
+      "geometry": {
+        "length": 144,
+        "deck_level": 64
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "F",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 144,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -24,
+        144,
+        24
+      ],
+      "notes": "桥面高度按 ASC_N 升高 64mm 对齐；长度待实测（BRIO 桥面有短/中/长/超长四档）；桥下净空必须 ≥ 火车高度，KYZ 坡道刻意略高以保证宜家电动火车通过；端口 level 为相对高度 0，桥面绝对高度由连接链级联（基准高度）决定"
+    },
+    {
+      "id": "BUFFER",
+      "name": "缓冲止挡",
+      "alias": "BRIO R / S",
+      "family": "buffer",
+      "confidence": "community-derived",
+      "geometry": {
+        "length": 40
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -20,
+        40,
+        20
+      ],
+      "notes": "单端口终止件；R/S 为左右涂装差异，几何相同"
+    },
+    {
+      "id": "ADPT_MM_54",
+      "name": "双公连接件",
+      "alias": "double peg 5.4cm",
+      "family": "adapter",
+      "confidence": "community-verified",
+      "geometry": {
+        "length": 54
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 54,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -14,
+        54,
+        14
+      ],
+      "notes": "解决两个母口相遇；双母 ADPT_FF_54 同理。3D 打印件还常见 M-M/F-F 直轨变体"
+    },
+    {
+      "id": "ADPT_IKEA_EICHHORN",
+      "name": "宜家/Eichhorn 凸榫适配件",
+      "family": "adapter",
+      "confidence": "estimated",
+      "geometry": {
+        "length": 20
+      },
+      "ports": [
+        {
+          "id": "a",
+          "x": 0,
+          "y": 0,
+          "heading": 180,
+          "polarity": "M",
+          "level": 0
+        },
+        {
+          "id": "b",
+          "x": 20,
+          "y": 0,
+          "heading": 0,
+          "polarity": "M",
+          "level": 0
+        }
+      ],
+      "footprint_bbox": [
+        0,
+        -14,
+        20,
+        14
+      ],
+      "notes": "KYZ 提供的适配器（宜家与 Eichhorn 凸榫略短）；长度为估计值，待实测"
+    }
+  ],
+  "calibration_todo": [
+    "用卡尺实测：45° 大弯轨端到端直线距离（验证 R=202 中心线口径）",
+    "实测小弯轨 E1 的弦长与转角（当前 90mm/45° 为反推值）",
+    "实测爬坡轨 N 的水平投影长度与净升高（验证 64mm）",
+    "实测桥面高度与桥下净空（火车能否通过）",
+    "实测十字交叉四臂的公母极性分布",
+    "实测 T 形道岔分支出口位置",
+    "验证 Vario 间隙：单接口可承受的最大横向偏移与角度偏差",
+    "天猫套装 612983111070 需用户提供 SKU 清单或截图后录入"
+  ]
+}
