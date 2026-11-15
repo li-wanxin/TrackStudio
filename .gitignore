@@ -17,3 +17,6 @@ Packages/*/.build/
 # Temp
 *.log
 *.tmp
+
+# Xcode 中间产物
+TrackStudio.xcodeproj/-Xcc/
